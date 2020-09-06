@@ -1,38 +1,219 @@
-.App {
-  text-align: center;
+* {
+  margin: 0px;
+  padding: 0px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  overflow-x: hidden;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 50px;
+  background-color: #00279b;
+  padding: 0px 5%;
+}
+
+nav .logo {
+  width: 20%;
+}
+
+nav .logo h4 {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+nav .links-container {
+  width: 35%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+nav .links-container .links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
 }
+
+nav .links-container .links .link {
+  text-decoration: none;
+  -webkit-transition-duration: 400ms;
+          transition-duration: 400ms;
+}
+
+nav .links-container .links .link li {
+  color: white;
+}
+
+nav .links-container .links .link:hover {
+  border-bottom: 1px solid white;
+}
+
+.home-page {
+  padding: 1.25% 5%;
+}
+
+.home-page .movies-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.home-page .movies-container .movie-link {
+  text-decoration: none;
+  color: black;
+}
+
+.home-page .movies-container .movie-description {
+  width: 15rem;
+  overflow: hidden;
+  margin: 1.5rem;
+}
+
+.home-page .movies-container .movie-description .image-container {
+  width: 100%;
+  height: auto;
+}
+
+.home-page .movies-container .movie-description .image-container img {
+  width: 100%;
+  height: auto;
+}
+
+.home-page .movies-container .movie-description h5, .home-page .movies-container .movie-description p {
+  display: block;
+  padding: 3px 5%;
+}
+
+.home-page .movies-container .movie-description:hover {
+  -webkit-box-shadow: 1px 1px 3px gray, -1px -1px 3px gray;
+          box-shadow: 1px 1px 3px gray, -1px -1px 3px gray;
+}
+
+.home-page .change-page {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.home-page .change-page .page-change-btn {
+  background-color: lightgray;
+  text-decoration: none;
+  color: black;
+  padding: 0.1rem 0.75rem 0.4rem 0.75rem;
+  border-radius: 10px;
+}
+
+.home-page .change-page .page-change-btn:hover {
+  background-color: gray;
+}
+
+.home-page .change-page span {
+  margin: 0px 1rem;
+}
+
+.home-page .search-container {
+  height: 85vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.home-page .search-container #search {
+  background: lightgray;
+  width: 17.5rem;
+  height: 2rem;
+  border-radius: 10px;
+  color: black;
+  padding: 3px 1.5rem;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+}
+
+.home-page .search-container #search-btn {
+  background: transparent;
+  border: none;
+  outline: none;
+  margin-left: 1rem;
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 50%;
+  -webkit-transition: 400ms;
+  transition: 400ms;
+}
+
+.home-page .search-container #search-btn .search-icon {
+  font-size: 1.2rem;
+  color: black;
+}
+
+.home-page .search-container #search-btn:hover {
+  background-color: lightgray;
+}
+
+.full-movie-description {
+  padding: 2.5% 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.full-movie-description .image-container {
+  width: 20rem;
+  margin: 0rem 2rem;
+}
+
+.full-movie-description .image-container img {
+  width: 100%;
+  height: auto;
+}
+
+.full-movie-description .description {
+  width: 67.5%;
+}
+
+.full-movie-description .description h4 {
+  display: block;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.full-movie-description .description p {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+/*# sourceMappingURL=App.css.map */
