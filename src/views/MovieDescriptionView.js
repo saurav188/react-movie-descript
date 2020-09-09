@@ -3,7 +3,7 @@ import Fetcher from '../hooks/Fetcher';
 
 export default function MovieDescriptionView(match){
     const movie_id=match.match.params.id;
-    const url='http://www.omdbapi.com/?apikey=59ecd04c&i='+movie_id;
+    const url='https://www.omdbapi.com/?apikey=59ecd04c&i='+movie_id;
 
     const movie=Fetcher(url);
     return(

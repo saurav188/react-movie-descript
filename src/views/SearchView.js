@@ -11,7 +11,7 @@ function SearchView(match) {
     function refreshPage(){ 
         window.location.reload(); 
     }
-    const url=`http://www.omdbapi.com/?apikey=59ecd04c&s=${search_keyword}&page=${page_no}`;
+    const url=`https://www.omdbapi.com/?apikey=59ecd04c&s=${search_keyword}&page=${page_no}`;
     const movies=SearchFetcher(url);
     //handling error of having to many movies sent
     if(movies==null){
