@@ -12,7 +12,7 @@ function HomeView() {
     return (
         <div className="home-page">
             <div className="search-container">
-                <input type='text' id="search" placeholder='Searh here'></input>
+                <input type='text' id="search" placeholder='Search here'></input>
                 <button type='button' id="search-btn" onClick={()=>search()}>
                     <FaSearch className="search-icon"/>
                 </button>
